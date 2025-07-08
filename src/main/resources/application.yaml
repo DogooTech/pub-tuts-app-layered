@@ -1,0 +1,36 @@
+spring.application.name: tuts-app-layered
+
+springdoc:
+  swagger-ui.path: /openapi/swagger-ui.html
+  api-docs.path: /openapi/v3/api-docs
+  packagesToScan: com.koder.course.applayered.api
+  pathsToMatch: /**
+
+api:
+  common:
+    version: 1.0.0
+    title: Product APIs
+    description: Description of the API...
+    termsOfService: MY TERMS OF SERVICE
+    license: MIT
+    licenseUrl: MY LICENSE URL
+    externalDocDesc: MY WIKI PAGE
+    externalDocUrl: MY WIKI URL
+    contact:
+      name: Khoa Vu
+      url: https://etask.vn
+      email: khoavd.it@gmail.com
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:maindb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  h2:
+    console:
+      enabled: true
